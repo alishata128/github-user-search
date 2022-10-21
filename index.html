@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github User Search</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap"
+    />
+  </head>
+  <body>
+    <header class="header">
+        <div class="container">
+        <div class="header-logo">
+          <p>Github User Search</p>
+        </div>
+        <div class="small-header-items">
+          <div class="three">
+          <div class="line" id="line1"></div>
+          <div class="line" id="line2"></div>
+          <div class="line" id="line3"></div>
+          </div>
+          <ul id="ul">
+            <li><a href="https://github.com/alishata128" class="link">About</a></li>
+            <li><a href="https://github.com/alishata128" class="link">Contact</a></li>
+            <li><a href="https://github.com/alishata128/github-user-search" class="link">Repo</a></li>
+          </ul>
+        </div>
+        <div class="header-items">
+          
+          <ul>
+            <li><a href="" class="link">About</a></li>
+            <li><a href="" class="link">Contact</a></li>
+            <li><a href="" class="link">Repo</a></li>
+          </ul>
+        </div>
+        </div>
+        </header>
+      <section class="search">
+        <div class="container">
+      <div class="search-main">
+        <div class="octocat">
+          <img src="./assets/octocat-1664813433176.png" alt="" />
+        </div>
+
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-bar-input"
+            placeholder="Type username to search for"
+            value=""
+          />
+        </div>
+      </div>
+
+      <div class="user">
+        <div class="top-panel">
+          <div class="close" id="close">x</div>
+          <div class="user-name"></div>
+        </div>
+        <div class="profile-img"></div>
+        <div class="name"></div>
+
+        <div class="type"></div>
+        <div class="bio"></div>
+        <div class="follows">
+          <div class="followers">Followers: <span class="span"></span></div>
+          <div class="following">Following: <span class="span"></span></div>
+        </div>
+        <a href="#" class="view">View</a>
+        <div class="bottom-panel">
+          <div class="public-repos-num">
+            Public repos: <span class="span"></span>
+          </div>
+          <div class="public-gists-num">
+            Public gists: <span class="span"></span>
+          </div>
+        </div>
+      </div>
+      </div>
+      </section>
+      <footer>
+        <div class="container">
+          Made by<a href="github.com/alishata128">@li->$hata</a>
+        </div>
+      </footer>
+    </div>
+    <script src="./script.js" async></script>
+  </body>
+</html>
