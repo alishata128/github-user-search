@@ -372,8 +372,9 @@ footer > .container > a{
         right: 0;
         margin: 15px;
         margin-bottom: 30px;
+        width: 90%;
         height: auto;
-        border-radius: 15px;
+        border-radius: 20px;
     }
     .profile-img{
         position: relative;
