@@ -55,6 +55,7 @@ class GithubUserSearch {
     document.body.classList.add("user-shown");
     this.$header.style.display = "none";
     this.$profileImg.getBoundingClientRect();
+    this.$input = "";
   }
 }
 
@@ -75,23 +76,25 @@ document.getElementById("close").addEventListener("click", function () {
 });
 
 document.getElementById("search-bar-input").addEventListener("keydown", (e) => {
-  e.preventDefault();
-  if (e.key == "Enter" && this.value !== "") {
-    console.log("searching");
-    new GithubUserSearch();
-    this.value = "";
-  } else if (this.value === "") {
-    //modal to tell user to type
+  // e.preventDefault();
+  if (document.getElementById("search-bar-input").value == "") {
+    //TODO: modal to tell user to type
+    console.log("no user entered");
+  } else {
+    if (e.key == "Enter") {
+      console.log("searching");
+      new GithubUserSearch();
+    }
   }
 });
 
 document.querySelector(".octocat").addEventListener("click", function (e) {
   e.preventDefault();
   if (document.getElementById("search-bar-input").value == "") {
-    //modal to tell user to type
+    //TODO: modal to tell user to type
+    console.log("no user entered");
   } else {
     new GithubUserSearch();
-    this.value = "";
   }
 });
 
