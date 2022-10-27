@@ -17,10 +17,14 @@ class GithubUserSearch {
     this.$view = document.querySelector(".view");
     this.$header = document.querySelector(".header");
     this.$three = document.querySelector(".three");
+    this.$footer = document.querySelector("footer");
+    this.$alishata = document.getElementById("alishata");
+    this.$speed = 50;
+    this.$index = 0;
+    this.$txt = this.$alishata.textContent;
     this.$user.style.display = "none";
     this.searchUser(this.$input);
     this.renderUser();
-    this.profileRectCheck();
   }
 
   async searchUser(user = "alishata128") {
@@ -56,16 +60,16 @@ class GithubUserSearch {
     this.$user.style.display = "flex";
     document.body.classList.add("user-shown");
     this.$header.style.display = "none";
-    this.$input = "";
-  }
-
-  profileRectCheck() {
-    // console.log(this.$profileImg.naturalWidth);
-    if (this.$profileImg.style.width === this.$profileImg.style.height) {
-      // console.log("ali ali ali");
+    this.$user.style.height = "90%";
+    this.$footer.classList.toggle("user-over");
+    if (this.$footer.classList.contains("user-over")) {
+      this.$footer.style.bottom = 0;
+      // console.log("user over");
     } else {
-      // console.log("not not not");
+      this.$footer.style.bottom = "-5%";
+      // console.log("user not over");
     }
+    this.$input = "";
   }
 }
 
@@ -99,8 +103,15 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+document
+  .getElementById("search-bar-input")
+  .addEventListener("click", function () {
+    this.scrollIntoView({ behavior: "smooth" });
+  });
+
 document.getElementById("search-bar-input").addEventListener("keydown", (e) => {
   // e.preventDefault();
+  // document.getElementById("search-bar-input").scrollIntoView();
   if (document.getElementById("search-bar-input").value == "") {
     //TODO: modal to tell user to type
     // console.log("no user entered");
@@ -114,6 +125,9 @@ document.getElementById("search-bar-input").addEventListener("keydown", (e) => {
 
 document.querySelector(".octocat").addEventListener("click", function (e) {
   e.preventDefault();
+  document
+    .getElementById("search-bar-input")
+    .scrollIntoView({ behavior: "smooth" });
   if (document.getElementById("search-bar-input").value == "") {
     //TODO: modal to tell user to type
     // console.log("no user entered");

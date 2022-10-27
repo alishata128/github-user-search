@@ -8,7 +8,9 @@ body{
     width: 100vw;
     height: 100vh;
     font-family: 'Google Sans', sans-serif;
+    /* overflow-y:scroll; */
     overflow-x: hidden;
+
     
 }
 /* 
@@ -249,10 +251,12 @@ header > .container{
 
 
 footer{
-    position: absolute;
-    bottom: 0;
+    display: block;
+    margin: 0 auto;
+    position:absolute;
+    bottom: -10%;
+    height: 5vh;
     width: 100%;
-    height: fit-content;
     background-color: #444;
     
 }
@@ -275,6 +279,7 @@ footer > .container > a{
 .user-shown{
     background-color: #444;
 }
+
 
 @media (max-width:570px) {
     
@@ -380,6 +385,12 @@ footer > .container > a{
         position: relative;
         padding: 80px;
     }
+
+    .search-main{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
     #search-bar-input{
         width: 160px;
         font-size: .8em;
@@ -391,6 +402,8 @@ footer > .container > a{
     }
     footer{
         position: absolute;
-        margin-top: 20px;
+        bottom: 0;
+        /* margin-top: 20px; */
+        height: 5vh;
     }
 }
