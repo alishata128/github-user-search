@@ -93,5 +93,42 @@
       </footer>
     </div>
     <script src="./script.js" async></script>
+
+    <script src="./js/typed.js"></script>
+
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        </script>
+      
+        <script>  
+                // var typed = new Typed("#alishata", {
+                //     strings: ['@','@l','@li','@li$','@li$h','@li$ha','@li$hat','@li$hata'],
+                //     typeSpeed: 70,
+                //     loop: true,
+                //     // backDelay: 400,
+                //     backSpeed: 100,
+                // });
+
+                var typed2 = new Typed('#search-bar-input', {
+                  strings:['Type username to search for', 'for example','alishata128','google','microsoft','apple'],
+                  typeSpeed:15,
+                  backSpeed:15,
+                  attr: 'placeholder',
+                  bindInputFocusEvents: true,
+                  loop:true,
+                });
+
+                document.addEventListener('mouseover',function(e){
+                    // if(e.currentTarget.nodeName === 'INPUT'){
+                      if(e.target.id === 'search-bar-input'){
+                        typed2.stop()
+                      }
+                    else{
+                      typed2.start()
+                    }
+                
+
+                })
+        </script>
   </body>
 </html>

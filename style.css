@@ -300,14 +300,15 @@ footer > .container > a{
         position: absolute;
         /* top: 50%;
         transform: translateY(-50%); */
-        top: 50px;
-        bottom: 0;
+        top: 60px;
+        bottom: 30px;
         left: 0;
         right: 0;
         margin: 0 auto;
         background-color: #666;
         gap: 50px;
         transition: linear 0.3s;
+        z-index: 999;
 
     }
 
